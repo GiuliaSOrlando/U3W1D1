@@ -31,9 +31,12 @@ submitBtn.addEventListener("click", function (event) {
             console.log("Nessuno dei due ha azzeccato il numero casuale, ma il giocatore 2 si è avvicinato di più");
             alert(`Il numero estratto è ${randomNum},  perciò nessuno dei due ha azzeccato il numero casuale, ma il giocatore 2 si è avvicinato di più`);
         }
+        else if (Math.abs(randomNum - inputFirstPlayer) <
+            Math.abs(randomNum - inputSecondPlayer)) {
+            console.log("Nessuno dei due ha azzeccato il numero casuale ed entrambi sono ugualmente distanti dal numero estratto");
+            alert(`Il numero estratto è ${randomNum}, perciò nessuno dei due ha azzeccato il numero casuale, ed entrambi sono ugualmente distanti dal numero estratto`);
+        }
         else {
-            console.log("Nessuno dei due ha azzeccato il numero casuale, ma il giocatore 1 si è avvicinato di più");
-            alert(`Il numero estratto è ${randomNum},  perciò nessuno dei due ha azzeccato il numero casuale, ma il giocatore 1 si è avvicinato di più`);
         }
     }
 });
