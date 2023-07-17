@@ -3,7 +3,7 @@ const submitBtn = document.getElementById("submit-button") as HTMLButtonElement
 submitBtn.addEventListener("click", function (event) {
   event.preventDefault()
   // Genero un numero casuale
-  let randomNum: number = 100
+  let randomNum: number = Math.floor(Math.random() * (100 - 1) + 1)
   console.log(randomNum)
 
   // Memorizzo in una variabile l'input del primo giocatore
